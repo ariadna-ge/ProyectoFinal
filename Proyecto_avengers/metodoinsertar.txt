@@ -1,0 +1,11 @@
+       AvengersDAO avengersDAO = new AvengersDAO();
+        Avengers avengers = new Avengers(0,"Thor Odinson","Thor","Velocidad y teletransportacion", "Dios del trueno", "https://i.pinimg.com/474x/ac/1c/96/ac1c96fe06a34482691a3fd9e5807f69.jpg");
+        try{
+            if (avengersDAO.insert(avengers)){
+                System.out.println("se inserto");
+            } else {
+                System.out.println("no se inserto");
+            }
+        }catch (SQLException sqlException){
+            System.out.println(sqlException.getMessage());
+        }
